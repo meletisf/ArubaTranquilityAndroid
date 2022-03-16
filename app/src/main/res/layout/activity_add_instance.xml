@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="top"
+    tools:context=".AddInstanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/instance_hostname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorHighlight="@color/white"
+            android:backgroundTint="@color/white"
+            android:layout_marginVertical="5dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="@string/hostname"/>
+
+        <EditText
+            android:id="@+id/instance_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorHighlight="@color/white"
+            android:backgroundTint="@color/white"
+            android:layout_marginVertical="5dp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:hint="@string/email"/>
+
+        <EditText
+            android:id="@+id/instance_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorHighlight="@color/white"
+            android:backgroundTint="@color/white"
+            android:layout_marginVertical="5dp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:hint="@string/password"/>
+
+        <Button
+            android:id="@+id/save_instance_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Button.Default"
+            android:layout_marginTop="18dp"
+            android:text="@string/save_instance"/>
+    </LinearLayout>
+
+</LinearLayout>

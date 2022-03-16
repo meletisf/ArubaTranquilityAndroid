@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">Aruba Tranquility</string>
+    <string name="copyright_notice">Copyright 2022</string>
+
+    <!-- BUTTONS -->
+    <string name="new_instance">+ Add new Instance</string>
+    <string name="save_instance">Save Instance</string>
+
+    <!-- ACTIVITY TITLES -->
+    <string name="splash_activity_title">Aruba Tranquility</string>
+    <string name="new_activity_title">Add a new ATQ instance</string>
+
+    <!-- FORMS -->
+    <string name="hostname">Hostname</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>

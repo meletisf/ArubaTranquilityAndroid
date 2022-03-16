@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_widget"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/server_network"
+            android:layout_marginEnd="4dp"
+            app:tint="@color/white" />
+        <TextView
+            android:id="@+id/instance_hostname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:text="atq.hpe.oracle-1.flevarakis.xyz"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginVertical="3dp"
+        android:background="#ffffff"/>
+    <TextView
+        android:id="@+id/instance_email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:text="meletios.flevarakis@hpe.com"/>
+
+</LinearLayout>

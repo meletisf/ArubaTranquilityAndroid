@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <color name="aruba_orange">#F18220</color>
+    <color name="detail_grey">#777777</color>
+    <color name="background">#1A2034</color>
+    <color name="container_generic">#212A40</color>
+
+    <color name="success_green">#31CE36</color>
+    <color name="warning_orange">#FFAD46</color>
+    <color name="error_red">#F25961</color>
+
+    <color name="link_blue">#1472E8</color>
+
+    <color name="container_purple">#6961CE</color>
+    <color name="container_green">#31CE36</color>
+    <color name="container_light_blue">#48ABF7</color>
+    <color name="container_blue">#1472E8</color>
+</resources>
