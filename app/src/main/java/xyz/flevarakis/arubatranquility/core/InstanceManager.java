@@ -49,7 +49,7 @@ public class InstanceManager {
     private String getFileContent() {
         FileInputStream fis = null;
         try {
-            fis = context.openFileInput(Constants.instancesFileName);
+            fis = context.openFileInput(Constants.INSTANCES_FILE_NAME);
         } catch (FileNotFoundException e) {
             Log.i(TAG, "Instances file didn't exist. Creating now");
             createFileIfDoesntExist();
@@ -71,14 +71,14 @@ public class InstanceManager {
     }
 
     public void createFileIfDoesntExist() {
-        File file = new File(context.getFilesDir(), Constants.instancesFileName);
+        File file = new File(context.getFilesDir(), Constants.INSTANCES_FILE_NAME);
         if(! file.exists()) {
             writeToFile("[]");
         }
     }
 
     private void writeToFile(String content) {
-        try (FileOutputStream fos = context.openFileOutput(Constants.instancesFileName, Context.MODE_PRIVATE)) {
+        try (FileOutputStream fos = context.openFileOutput(Constants.INSTANCES_FILE_NAME, Context.MODE_PRIVATE)) {
             fos.write(content.getBytes(StandardCharsets.UTF_8));
         } catch (IOException ioException) {
             ioException.printStackTrace();

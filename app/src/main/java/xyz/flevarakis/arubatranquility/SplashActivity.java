@@ -98,7 +98,7 @@ public class SplashActivity extends AppCompatActivity {
     private void contact() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_EMAIL, "meletios.flevarakis@hpe.com");
+        intent.putExtra(Intent.EXTRA_EMAIL, "m.flevarakis@acg.edu");
         intent.putExtra(Intent.EXTRA_SUBJECT, "Aruba Tranquility");
         if (intent.resolveActivity(getPackageManager()) != null) {
             Log.d(TAG, "Starting mail client");
@@ -107,7 +107,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void handleActivityResult(ActivityResult result) {
-        if (result.getResultCode() == Constants.returnNewInstanceResultCode) {
+        if (result.getResultCode() == Constants.RETURN_NEW_INSTANCE_RESULT_CODE) {
             Intent intent = result.getData();
             if (intent != null) {
                 addNewInstance((Instance) intent.getSerializableExtra("instance"));

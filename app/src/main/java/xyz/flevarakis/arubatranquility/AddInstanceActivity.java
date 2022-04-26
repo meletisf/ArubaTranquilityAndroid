@@ -41,7 +41,7 @@ public class AddInstanceActivity extends AppCompatActivity {
 
         Intent intent = new Intent();
         intent.putExtra("instance", i);
-        setResult(Constants.returnNewInstanceResultCode, intent);
+        setResult(Constants.RETURN_NEW_INSTANCE_RESULT_CODE, intent);
         finish();
     }
 

@@ -9,88 +9,270 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
+        android:layout_height="wrap_content">
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="92dp"
-                android:background="@drawable/blue_widget"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_marginVertical="9dp">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/office_building_marker_outline"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:tint="@color/white" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Locations Monitored-->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="22sp"
-                        android:textColor="@color/white"
-                        android:text="Locations Monitored"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="26sp"
-                        android:textColor="@color/white"
-                        android:text="115"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:background="@drawable/blue_widget"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_marginVertical="9dp">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/office_building_marker_outline"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:tint="@color/white" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textColor="@color/white"
+                            android:text="Locations Monitored"/>
+                        <TextView
+                            android:id="@+id/locations_monitored_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="26sp"
+                            android:textColor="@color/white"
+                            android:text="-"/>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="92dp"
-                android:background="@drawable/light_blue_widget"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_marginVertical="9dp">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/cellphone_link"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:tint="@color/white" />
+                <!--Connected Clients-->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="22sp"
-                        android:textColor="@color/white"
-                        android:text="Connected Clients"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="26sp"
-                        android:textColor="@color/white"
-                        android:text="17465"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:background="@drawable/light_blue_widget"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_marginVertical="9dp">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cellphone_link"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:tint="@color/white" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textColor="@color/white"
+                            android:text="Connected Clients"/>
+                        <TextView
+                            android:id="@+id/connected_clients_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="26sp"
+                            android:textColor="@color/white"
+                            android:text="-"/>
+                    </LinearLayout>
                 </LinearLayout>
+                <!--Devices Up-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:background="@drawable/green_widget"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_marginVertical="9dp">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/access_point_network"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        app:tint="@color/white" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textColor="@color/white"
+                            android:text="Devices Up"/>
+                        <TextView
+                            android:id="@+id/devices_up_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="26sp"
+                            android:textColor="@color/white"
+                            android:text="-"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/container">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/check_circle"
+                            app:tint="@color/success_green" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="19sp"
+                                android:textColor="@color/white"
+                                android:text="@string/healthy_sites_title"/>
+                            <TextView
+                                android:id="@+id/healthy_sites_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="19sp"
+                                android:textColor="@color/white"
+                                android:text="-"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginVertical="3dp"
+                        android:background="@color/separator_gray"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/alert_circle"
+                            app:tint="@color/warning_orange" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="19sp"
+                                android:textColor="@color/white"
+                                android:text="@string/sites_with_warnings_title"/>
+                            <TextView
+                                android:id="@+id/sites_with_warning_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="19sp"
+                                android:textColor="@color/white"
+                                android:text="-"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginVertical="3dp"
+                        android:background="@color/separator_gray"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/close_circle"
+                            app:tint="@color/error_red" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="19sp"
+                                android:textColor="@color/white"
+                                android:text="@string/critical_sites_title"/>
+                            <TextView
+                                android:id="@+id/critical_sites_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="19sp"
+                                android:textColor="@color/white"
+                                android:text="-"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/view_sites_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:theme="@style/Button.Default"
+                    android:text="@string/view_sites"/>
+
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </LinearLayout>

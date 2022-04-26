@@ -5,6 +5,7 @@
     <!-- BUTTONS -->
     <string name="new_instance">+ Add new Instance</string>
     <string name="save_instance">Save Instance</string>
+    <string name="view_sites">View Sites</string>
 
     <!-- ACTIVITY TITLES -->
     <string name="splash_activity_title">Aruba Tranquility</string>
@@ -14,4 +15,12 @@
     <string name="hostname">Hostname</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+
+    <!-- TITLES -->
+    <string name="location_monitored_title">Locations Monitored</string>
+    <string name="connected_clients_title">Connected Clients</string>
+    <string name="devices_up_title">Devices Up</string>
+    <string name="healthy_sites_title">Healthy Sites</string>
+    <string name="sites_with_warnings_title">Sites with Warnings</string>
+    <string name="critical_sites_title">Critical Sites</string>
 </resources>

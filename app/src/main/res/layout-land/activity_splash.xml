@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingHorizontal="32dp"
+        android:layout_weight="1"
+        android:src="@drawable/aruba_logo"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="7dp"
+        android:layout_gravity="center"/>
+
+    <!--The list with all the instances-->
+    <ListView
+        android:id="@+id/instances_list_view"
+        android:layout_width="match_parent"
+        android:layout_weight="17"
+        android:layout_height="0dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="7.0sp"
+        android:paddingHorizontal="1dp"
+        android:layout_marginHorizontal="40dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/add_instance_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_instance"
+            android:layout_marginVertical="2dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/copyright_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/copyright_notice"
+            android:textSize="17sp"
+            android:layout_marginHorizontal="5dp" />
+        <TextView
+            android:id="@+id/contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/link_blue"
+            android:text="Contact Us"
+            android:textSize="17sp"
+            android:layout_marginHorizontal="5dp" />
+    </LinearLayout>
+</LinearLayout>

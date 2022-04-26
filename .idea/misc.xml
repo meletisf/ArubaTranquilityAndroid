@@ -3,14 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable-xxhdpi/green_widget.xml" value="0.326" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable/blue_widget.xml" value="0.336" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable/container.xml" value="0.336" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable/dark_blue_widget.xml" value="0.336" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable/ic_launcher_background.xml" value="0.336" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable/light_blue_widget.xml" value="0.336" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/drawable/server_network.xml" value="0.336" />
+        <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout-land/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout-land/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout/activity_add_instance.xml" value="0.1" />
-        <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout/activity_main.xml" value="0.29743589743589743" />
+        <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout/activity_main.xml" value="0.46123260437375746" />
+        <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout/activity_main_land.xml" value="0.2858974358974359" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Users/fmele/AndroidStudioProjects/ArubaTranquility/app/src/main/res/layout/instance.xml" value="0.5" />
       </map>
